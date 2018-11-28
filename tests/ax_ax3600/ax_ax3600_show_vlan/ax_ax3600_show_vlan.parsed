@@ -1,0 +1,33 @@
+- AXRP_RING_ID: ''
+  AXRP_VLAN_GROUP: ''
+  DESCR: VLAN0001
+  GSRP_ID: '1'
+  GSRP_VLAN_GROUP: '-'
+  IP_ADDR: ''
+  NAME: VLAN0001
+  SMAC: 0012.e24e.c26d
+  STATUS: Down
+  TYPE: Port based
+  VLAN_ID: '1'
+- AXRP_RING_ID: ''
+  AXRP_VLAN_GROUP: ''
+  DESCR: VLAN0010
+  GSRP_ID: '1'
+  GSRP_VLAN_GROUP: '-'
+  IP_ADDR: 10.255.10.2
+  NAME: VLAN0010
+  SMAC: 0012.e24e.c26d
+  STATUS: Down
+  TYPE: Port based
+  VLAN_ID: '10'
+- AXRP_RING_ID: ''
+  AXRP_VLAN_GROUP: ''
+  DESCR: GSRP-VLAN
+  GSRP_ID: '1'
+  GSRP_VLAN_GROUP: '-'
+  IP_ADDR: ''
+  NAME: VLAN4000
+  SMAC: 0012.e24e.c26d
+  STATUS: Down
+  TYPE: Port based
+  VLAN_ID: '4000'

@@ -1,0 +1,13 @@
+Value PORT ((\d+\s*/)*\s*\d+\s*/\s*\d+)
+Value NAME (\S+)
+Value LINK_STATUS (\S+)
+Value SPEED (\S+)
+Value DUPLEX (\S+)
+Value FLOW_CONTROL (\S+)
+Value MTU (\d+|-*)
+Value LAG_ID (\d+|-*)
+Value LAG_STATUS (\S+)
+
+Start
+  ^\s*${PORT}\s*${NAME}\s*${LINK_STATUS}\s*${SPEED}\s*${DUPLEX}\s*${FLOW_CONTROL}\s*${MTU}\s*${LAG_ID}\s*/\s*${LAG_STATUS}$$ -> Record
+  

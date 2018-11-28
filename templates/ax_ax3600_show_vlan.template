@@ -1,0 +1,21 @@
+Value VLAN_ID (\d+)
+Value TYPE (\S+\s\S+)
+Value STATUS (\S+)
+Value NAME (\S+)
+Value IP_ADDR (\d+\.\d+\.\d+\.\d+|$$)
+Value SMAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value DESCR (\S+)
+Value AXRP_RING_ID (\d+|-*)
+Value AXRP_VLAN_GROUP (\d+|-*)
+Value GSRP_ID (\d+|-*)
+Value GSRP_VLAN_GROUP (\d+|-*)
+
+Start
+  ^VLAN ID:.*$$ -> Continue.Record
+  ^VLAN ID:\s*${VLAN_ID}\s+Type:\s*${TYPE}\s+Status:\s*${STATUS}
+  ^\s{2}Router Interface Name:\s*${NAME}
+  ^\s{2}IP Address:\s*${IP_ADDR}
+  ^\s{2}Source MAC address:\s+${SMAC}
+  ^\s{2}Description:${DESCR}
+  ^\s{2}AXRP RING ID:${AXRP_RING_ID}\s+AXRP VLAN group:${AXRP_VLAN_GROUP}
+  ^\s{2}GSRP ID:${GSRP_ID}\s+GSRP VLAN group:${GSRP_VLAN_GROUP}

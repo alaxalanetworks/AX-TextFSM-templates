@@ -1,0 +1,47 @@
+Value LAG_ID (\d+)
+Value LAG_MODE (\S+)
+Value LAG_STATUS (\S+)
+Value ELAPSED_TIME (\S+)
+Value MULTI_SPEED (\S+)
+Value LOAD_BALANCE (\S+)
+Value MAX_ACTIVE_PORT (\d+)
+Value MAX_DETACH_PORT (\d+)
+Value LAG_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value LAG_VLAN (\S+)
+Value PERIODIC_TIMER (\S+)
+Value ACTOR_SYS_PRI (\d+)
+Value ACTOR_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value ACTOR_KEY (\d+)
+Value PARTNER_SYS_PRI (\d+)
+Value PARTNER_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value PARTNER_KEY (\d+)
+Value PORT_COUNTS (\d+)
+Value LAG_PORTS (\S+)
+Value LAG_UP_PORT_COUNTS (\d+)
+Value LAG_UP_PORT (\S+)
+Value LAG_DOWN_PORT_COUNTS (\d+)
+Value LAG_DOWN_PORT (\S+|$$)
+
+Start
+  ^ChGr:.*$$ -> Continue.Record
+  ^ChGr:\s*${LAG_ID}\s+Mode:\s*${LAG_MODE}.*$$
+  ^\s{2}CH Status\s*:\s*${LAG_STATUS}\s+Elapsed Time:\s*${ELAPSED_TIME}.*$$
+  ^\s{2}Multi Speed\s*:\s*${MULTI_SPEED}\s+Load Balance:\s*${LOAD_BALANCE}.*$$
+  ^\s{2}Max Active Port:\s*${MAX_ACTIVE_PORT}.*$$
+  ^\s{2}Max Detach Port:\s*${MAX_DETACH_PORT}.*$$
+  ^\s{2}MAC address:\s*${LAG_MAC}\s+VLAN ID:\s*${LAG_VLAN}.*$$
+  ^\s{2}Periodic Timer:\s*${PERIODIC_TIMER}.*$$ -> ACTOR_INFO
+  ^\s{2}Port\(${PORT_COUNTS}\)\s+:\s*${LAG_PORTS}.*$$ -> PORT_INFO
+
+ACTOR_INFO
+  ^\s{2}Actor\s+information:\s*System Priority:\s*${ACTOR_SYS_PRI}\s+MAC:\s*${ACTOR_MAC}.*$$
+  ^\s+KEY:\s*${ACTOR_KEY}.*$$ -> PARTNER_INFO
+
+PARTNER_INFO
+  ^\s{2}Partner\s+information:\s*System Priority:\s*${PARTNER_SYS_PRI}\s+MAC:\s*${PARTNER_MAC}.*$$
+  ^\s+KEY:\s*${PARTNER_KEY}.*$$
+  ^\s{2}Port\(${PORT_COUNTS}\)\s+:\s*${LAG_PORTS}.*$$ -> PORT_INFO
+
+PORT_INFO
+  ^\s{2}Up Port\(${LAG_UP_PORT_COUNTS}\)\s+:\s*${LAG_UP_PORT}.*$$
+  ^\s{2}Down Port\(${LAG_DOWN_PORT_COUNTS}\)\s+:\s*${LAG_DOWN_PORT}.*$$ -> Start 

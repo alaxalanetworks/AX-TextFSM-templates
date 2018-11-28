@@ -1,0 +1,29 @@
+Date 2000/01/15 09:45:22 JST
+channel-group Counts:2
+ChGr:10   Mode:Static
+  CH Status    :Down      Elapsed Time:-
+  Multi Speed  :Off       Load Balance:src-dst-port
+  Max Active Port:8 
+  Max Detach Port:7 
+  MAC address: 0000.0000.0000     VLAN ID:1
+  Port Counts:1        Up Port Counts:0  
+  Port:0/3   Status:Down  Reason:Port Down
+             Speed :-     Duplex:-         Priority:128
+ChGr:17   Mode:LACP
+  CH Status    :Up        Elapsed Time:007.05:27:27
+  Multi Speed  :Off       Load Balance:src-dst-port
+  Max Active Port:8 
+  Max Detach Port:7 
+  MAC address: 0012.e2d8.d8a6     VLAN ID:10-11
+  Periodic Timer:Long
+  Actor   information: System Priority:128   MAC: 0012.e2d8.d8a1
+                       KEY:17
+  Partner information: System Priority:128   MAC: 0012.e24e.c26d
+                       KEY:17        
+  Port Counts:2        Up Port Counts:1  
+  Port:0/4   Status:Down  Reason:Port Down
+             Speed :-     Duplex:-     LACP Activity:Active 
+             Actor   Priority:128     Partner Priority:0
+  Port:0/5   Status:Up    Reason:-
+             Speed :1G    Duplex:Full  LACP Activity:Active 
+             Actor   Priority:128     Partner Priority:128

@@ -1,0 +1,69 @@
+Date 2000/01/15 10:30:40 JST
+System: AX3660S-48T4XW, OS-L3M (SL-L3A-001) Ver. 12.1.E
+Node : Name=AX3660S-2
+    Contact=ONE OK ROCK
+    Locate=Kanagawa (MH) 6F South
+    Elapsed time : 14days 01:08:22
+    LED Brightness mode : normal
+    Machine ID : 0012.e24e.c26d
+    Power redundancy-mode : check is not executed
+    Power slot 1 : active PS-M(AC)
+        Fan  : active No = Fan1(1) Speed = --------, Direction = F-to-R
+        PS   : active
+    Power slot 2 : active PS-M(AC)
+        Fan  : active No = Fan2(1) Speed = --------, Direction = F-to-R
+        PS   : active
+    Fan slot : active FAN-M
+        Fan  : active No = Fan3(1) , Fan3(2) , Fan3(3) , Fan3(4) 
+               Speed = normal, Direction = F-to-R
+        Lamp : ALM LED=light off
+    Main board : active
+        Boot : 2000/01/01 09:22:28 , power on 
+        Fatal restart : CPU 0 times ,  SW 0 times
+        Lamp : Power LED=green , Status LED1=green
+        Board : CPU=AMD GX-420 2000MHz , Memory=4,194,304KB(4096MB)
+        Management port: active up
+             100BASE-TX full(auto) 0012.e24e.c26e
+        Temperature : normal(28degree)
+        Flash :
+                  user area   config area     dump area    area total
+            used   92,986KB         165KB       9,392KB     102,543KB
+            free  375,470KB     116,897KB     121,616KB     613,983KB
+            total 468,456KB     117,062KB     131,008KB     716,526KB
+        MC  : notconnect
+        System interface hundredgigabitethernet :
+            disable (10G)  : -
+            enable  (100G) : -
+    Device resources
+        Current selected swrt_table_resource : l3switch-1
+        Current selected swrt_multicast_table : Off
+        Current selected unicast multipath number: 16
+        Current selected port-channel load-balance-all-port: Off
+        IP routing entry :
+            Unicast : current number=10 , max number=16285
+            Multicast : current number=0 , max number=8191
+            ARP : current number=0 , max number=30720
+        IPv6 routing entry :
+            Unicast : current number=0 , max number=0
+            Multicast : current number=0 , max number=0
+            NDP : current number=0 , max number=0
+        Multipath table entry : current number=0 , max number=256
+        MAC-Address table entry : current number=2 , max number=81920
+        VXLAN Layer2 Nexthop entry : current number=0 , max number=0
+        System Layer2 Table Mode : mode=0
+        Flow detection mode : layer3-2
+          Used resources for filter inbound(Used/Max)
+                    MAC      IPv4      IPv6
+                    n/a    8/4096       n/a
+          Used resources for QoS(Used/Max)
+                    MAC      IPv4      IPv6
+                    n/a    0/1024       n/a
+          Used resources for UPC(Used/Max)
+                    MAC      IPv4      IPv6
+                    n/a    0/1024       n/a
+          Used resources for TCP/UDP port detection pattern
+            Resources(Used/Max):  0/32
+        Flow detection out mode : layer3-1-out
+          Used resources for filter outbound(Used/Max)
+                    MAC      IPv4      IPv6
+                    n/a    0/1024       n/a

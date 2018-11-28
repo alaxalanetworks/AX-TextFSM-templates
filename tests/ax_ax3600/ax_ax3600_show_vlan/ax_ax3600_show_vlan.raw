@@ -1,0 +1,42 @@
+Date 2000/01/15 11:02:15 JST
+VLAN counts:3
+VLAN ID:1     Type:Port based      Status:Down
+  Learning:On            Tag-Translation:
+  BPDU Forwarding:       EAPOL Forwarding:
+  LLDP Forwarding:       UDLD Forwarding:  
+  Router Interface Name:VLAN0001
+  IP Address:
+  Source MAC address: 0012.e24e.c26d(System) 
+  Description:VLAN0001
+  Spanning Tree: 
+  AXRP RING ID:      AXRP VLAN group: 
+  GSRP ID:1     GSRP VLAN group:-   L3:
+  IGMP snooping:     MLD snooping:
+  Untagged(49)  :1/0/2-10,12-20,22-52
+VLAN ID:10    Type:Port based      Status:Down
+  Learning:On            Tag-Translation:
+  BPDU Forwarding:       EAPOL Forwarding:
+  LLDP Forwarding:       UDLD Forwarding:  
+  Router Interface Name:VLAN0010
+  VRF:10
+  IP Address:10.255.10.2/24
+  Source MAC address: 0012.e24e.c26d(System) 
+  Description:VLAN0010
+  Spanning Tree: 
+  AXRP RING ID:      AXRP VLAN group: 
+  GSRP ID:1     GSRP VLAN group:-   L3:
+  IGMP snooping:     MLD snooping:
+  Untagged(1)   :1/0/1
+VLAN ID:4000  Type:Port based      Status:Down
+  Learning:On            Tag-Translation:
+  BPDU Forwarding:       EAPOL Forwarding:
+  LLDP Forwarding:       UDLD Forwarding:  
+  Router Interface Name:VLAN4000
+  IP Address:
+  Source MAC address: 0012.e24e.c26d(System) 
+  Description:GSRP-VLAN
+  Spanning Tree: 
+  AXRP RING ID:      AXRP VLAN group: 
+  GSRP ID:1     GSRP VLAN group:-   L3:
+  IGMP snooping:     MLD snooping:
+  Untagged(1)   :1/0/21

@@ -1,0 +1,30 @@
+Value MODEL (\S+)
+Value OS_NAME ([\S ]+)
+Value OS_VERSION (\S+)
+Value NAME ([\S ]+)
+Value CONTACT ([\S ]+)
+Value LOCATION ([\S ]+)
+Value UPTIME ([\S ]+)
+Value MACHINE_ID ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value BOOT_TIME ([0-9]{4}/[0-2]{1,2}/[0-9]{1,2} \d+:\d+:\d+)
+Value RELOAD_REASON ([\S ]+\S+)
+Value MEMORY_KB ([\d,]+[Kk]B)
+Value MEMORY_MB ([\d,]+[Mm]B)
+Value FLASH_USER_USED ([\d,]+[KkMmGg]B)
+Value FLASH_USER_FREE ([\d,]+[KkMmGg]B)
+Value FLASH_CONFIG_USED ([\d,]+[KkMmGg]B)
+Value FLASH_CONFIG_FREE ([\d,]+[KkMmGg]B)
+Value FLASH_DUMP_USED ([\d,]+[KkMmGg]B)
+Value FLASH_DUMP_FREE ([\d,]+[KkMmGg]B)
+
+Start
+  ^System\s*:\s*${MODEL}\s*, ${OS_NAME}\s*Ver.\s*${OS_VERSION}.*$$
+  ^Node\s*:\s*Name=\s*${NAME}.*$$
+  ^[ ]{4}Contact=\s*${CONTACT}.*$$
+  ^[ ]{4}Locate=\s*${LOCATION}.*$$
+  ^[ ]{4}Elapsed time\s*:\s*${UPTIME}.*$$
+  ^[ ]{4}Machine ID\s*:\s*${MACHINE_ID}.*$$
+  ^[ ]{8}Boot\s*:\s*${BOOT_TIME}\s*,\s*${RELOAD_REASON}.*$$
+  ^[ ]{8}Board\s*:\s*CPU\s*=\s*[\S\s]+\s*,\s*Memory=\s*${MEMORY_KB}\(${MEMORY_MB}\).*$$
+  ^[ ]{12}used\s+${FLASH_USER_USED}\s+${FLASH_CONFIG_USED}\s+${FLASH_DUMP_USED}.*$$
+  ^[ ]{12}free\s+${FLASH_USER_FREE}\s+${FLASH_CONFIG_FREE}\s+${FLASH_DUMP_FREE}.*$$ -> Record
