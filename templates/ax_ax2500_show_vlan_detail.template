@@ -1,0 +1,12 @@
+Value Filldown,Key VLAN_ID (\d+)
+Value List PORT ((\d+\s*/)*\s*\d+\s*/\s*\d+)
+Value List PORT_CHGRP_NO (\d+)
+Value List PORT_STATUS (\S+)
+Value List PORT_BLK_STATUS (\S+)
+Value List PORT_TRUNK (\S+)
+
+Start
+  ^VLAN ID:.*$$ -> Continue.Record
+  ^VLAN ID:\s*${VLAN_ID}.*$$
+  ^\s{3}${PORT}\s*(\(ChGr\s*:\s*${PORT_CHGRP_NO}\))*\s*${PORT_STATUS}\s+${PORT_BLK_STATUS}\s+${PORT_TRUNK} -> Continue
+  

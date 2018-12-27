@@ -1,0 +1,27 @@
+Value MODEL (\S+)
+Value OS_VERSION (\S+)
+Value OS_BUILD (\S+)
+Value NAME ([\S ]+)
+Value CONTACT ([\S ]+)
+Value LOCATION ([\S ]+)
+Value STACK_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value List SWITCH_NO (\d+)
+Value List MACHINE_ID ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value List BOOT_TIME ([0-9]{4}/[0-2]{1,2}/[0-9]{1,2} \d+:\d+:\d+)
+Value List RELOAD_REASON (\S+)
+Value List UPTIME ([\S ]+)
+
+Start
+  ^System\s*:\s*${MODEL}\s*Ver.\s*${OS_VERSION}\s*\(Build\s*:\s*${OS_BUILD}\).*$$
+  ^[ ]{4}Name\s*:\s*${NAME}.*$$
+  ^[ ]{4}Contact\s*:\s*${CONTACT}.*$$
+  ^[ ]{4}Locate\s*:\s*${LOCATION}.*$$
+  ^[ ]{4}MAC address\s*:\s*${STACK_MAC}.*$$
+  ^[ ]{4}Machine ID\s*:\s*${MACHINE_ID}.*$$
+  ^[ ]{4}Switch  Machine ID      Boot Date            Boot reason       Elapsed time.*$$ -> STACK
+  ^[ ]{4}Boot Date\s*:\s*${BOOT_TIME}.*$$
+  ^[ ]{4}Boot reason\s*:\s*${RELOAD_REASON}.*$$
+  ^[ ]{4}Elapsed time\s*:\s*${UPTIME}.*$$
+
+STACK
+  ^[ ]{9}\s*${SWITCH_NO}\s*${MACHINE_ID}\s*${BOOT_TIME}\s*${RELOAD_REASON}\s*${UPTIME}

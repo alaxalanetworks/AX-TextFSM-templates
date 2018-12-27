@@ -1,0 +1,19 @@
+Date 1980/01/03 22:40:23 UTC
+ChGr: 1   Mode: Static
+  CH Status      : Up      Elapsed Time: 2.21:28:38
+  Max Active Port: 8  
+  Description    : AX25-nonstack-LAG
+  MAC address    : 0012.e2c2.3a29  VLAN ID: 100
+  Port Information
+    0/11  Down  State: Detached
+    0/13  Up    State: Distributing
+ChGr: 50  Mode: LACP
+  CH Status      : Up      Elapsed Time: 2.21:28:20
+  Max Active Port: 8  
+  MAC address    : 0012.e2c2.3a2b  VLAN ID: 200
+  Periodic Timer : Short
+  Actor System   : Priority: 128    MAC: 0012.e2c2.3a1c  Key: 50
+  Partner System : Priority: 128    MAC: 0012.e262.b563  Key: 50
+  Port Information
+    0/15  Up    State: Distributing
+    0/17  Up    State: Distributing

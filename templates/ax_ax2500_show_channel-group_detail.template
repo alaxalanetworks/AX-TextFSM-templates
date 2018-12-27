@@ -1,0 +1,20 @@
+Value Required,Filldown LAG_ID (\d+)
+Value Filldown LAG_MODE (\S+)
+Value Filldown LAG_STATUS (\S+)
+Value List LAG_PORT (\S+)
+Value List LAG_PORT_STATUS (\S+)
+Value List LAG_PORT_AGGR_STATUS (\S+)
+Value List LAG_PORT_SPEED (\S+)
+Value List LAG_PORT_DUPLEX (\S+)
+Value List LAG_PORT_ACTOR_PRI (\d+)
+Value List LAG_PORT_PARTNER_PRI (\d+)
+Value List LAG_PORT_PARTNER_NUMBER (\d+)
+
+Start
+  ^ChGr:\s*\d+\s+Mode:\s*.*$$ -> Continue.Record
+  ^ChGr:\s*${LAG_ID}\s+Mode:\s*${LAG_MODE}
+  ^\s{2}CH Status\s*:\s*${LAG_STATUS}\s+Elapsed Time:\s*\S+
+  ^\s{2}Port\s*:\s*${LAG_PORT}\s+${LAG_PORT_STATUS}.*$$
+  ^\s{4}State\s*:\s*${LAG_PORT_AGGR_STATUS}\s+Speed\s*:\s*${LAG_PORT_SPEED}\s+Duplex\s*:\s*${LAG_PORT_DUPLEX}$$
+  ^\s{4}Actor\s*Port\s*:\s*Priority\s*:\s*${LAG_PORT_ACTOR_PRI}$$ -> Continue
+  ^\s{4}Partner\s*Port\s*:\s*Priority\s*:\s*${LAG_PORT_PARTNER_PRI}\s*Number\s*:\s*${LAG_PORT_PARTNER_NUMBER}$$

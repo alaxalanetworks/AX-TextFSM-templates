@@ -1,0 +1,30 @@
+Value LAG_ID (\d+)
+Value LAG_MODE (\S+)
+Value LAG_STATUS (\S+)
+Value ELAPSED_TIME (\S+)
+Value MAX_ACTIVE_PORT (\d+)
+Value DESCR (\S+)
+Value LAG_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value LAG_VLAN (\S+)
+Value PERIODIC_TIMER (\S+)
+Value ACTOR_SYS_PRI (\d+)
+Value ACTOR_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value ACTOR_KEY (\d+)
+Value PARTNER_SYS_PRI (\d+)
+Value PARTNER_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value PARTNER_KEY (\d+)
+Value List LAG_PORT (\S+)
+Value List LAG_PORT_STATUS (\S+)
+Value List LAG_PORT_AGGR_STATUS (\S+)
+
+Start
+  ^ChGr\s*:.*$$ -> Continue.Record
+  ^ChGr\s*:\s*${LAG_ID}\s+Mode\s*:\s*${LAG_MODE}.*$$
+  ^\s{2}CH Status\s*:\s*${LAG_STATUS}\s+Elapsed Time\s*:\s*${ELAPSED_TIME}.*$$
+  ^\s{2}Max Active Port\s*:\s*${MAX_ACTIVE_PORT}.*$$
+  ^\s{2}Description\s*:\s*${DESCR}.*$$
+  ^\s{2}MAC address\s*:\s*${LAG_MAC}\s+VLAN ID\s*:\s*${LAG_VLAN}.*$$
+  ^\s{2}Periodic Timer\s*:\s*${PERIODIC_TIMER}.*$$
+  ^\s{2}Actor\s+System\s*:\s*Priority\s*:\s*${ACTOR_SYS_PRI}\s+MAC\s*:\s*${ACTOR_MAC}\s*Key\s*:\s*${ACTOR_KEY}.*$$
+  ^\s{2}Partner\s+System\s*:\s*Priority\s*:\s*${PARTNER_SYS_PRI}\s+MAC\s*:\s*${PARTNER_MAC}\s*Key\s*:\s*${PARTNER_KEY}.*$$
+  ^\s{4}${LAG_PORT}\s+${LAG_PORT_STATUS}\s+State\s*:\s*${LAG_PORT_AGGR_STATUS}.*$$

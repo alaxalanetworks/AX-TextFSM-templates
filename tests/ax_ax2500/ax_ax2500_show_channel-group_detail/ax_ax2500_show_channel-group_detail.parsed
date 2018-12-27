@@ -1,0 +1,48 @@
+- LAG_ID: '1'
+  LAG_MODE: Static
+  LAG_PORT:
+  - 1/0/11
+  - 2/0/13
+  LAG_PORT_ACTOR_PRI: []
+  LAG_PORT_AGGR_STATUS:
+  - Detached
+  - Distributing
+  LAG_PORT_DUPLEX:
+  - '-'
+  - Full
+  LAG_PORT_PARTNER_NUMBER: []
+  LAG_PORT_PARTNER_PRI: []
+  LAG_PORT_SPEED:
+  - '-'
+  - 1G
+  LAG_PORT_STATUS:
+  - Down
+  - Up
+  LAG_STATUS: Up
+- LAG_ID: '50'
+  LAG_MODE: LACP
+  LAG_PORT:
+  - 1/0/15
+  - 2/0/17
+  LAG_PORT_ACTOR_PRI:
+  - '128'
+  - '128'
+  LAG_PORT_AGGR_STATUS:
+  - Distributing
+  - Distributing
+  LAG_PORT_DUPLEX:
+  - Full
+  - Full
+  LAG_PORT_PARTNER_NUMBER:
+  - '15'
+  - '17'
+  LAG_PORT_PARTNER_PRI:
+  - '128'
+  - '128'
+  LAG_PORT_SPEED:
+  - 1G
+  - 1G
+  LAG_PORT_STATUS:
+  - Up
+  - Up
+  LAG_STATUS: Up

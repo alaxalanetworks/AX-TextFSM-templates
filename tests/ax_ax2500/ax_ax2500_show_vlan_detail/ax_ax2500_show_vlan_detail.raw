@@ -1,0 +1,57 @@
+Date 1980/01/03 22:41:48 UTC
+VLAN counts: 1    
+VLAN ID: 1     Type: Port based      Status: Down
+  Learning: On            Tag-Translation: 
+  BPDU Forwarding:        EAPOL Forwarding: 
+  Router Interface Name: VLAN0001
+  IP Address: 
+  Source MAC address: 0012.e2c2.3a1c(System)
+  Description: VLAN0001
+  Spanning Tree: None(-)
+  AXRP RING ID:       AXRP VLAN group: 
+  IGMP snooping:      MLD snooping: 
+  Port Information
+   0/1           Down -               Untagged 
+   0/2           Down -               Untagged 
+   0/3           Down -               Untagged 
+   0/4           Down -               Untagged 
+   0/5           Down -               Untagged 
+   0/6           Down -               Untagged 
+   0/8           Down -               Untagged 
+   0/9           Down -               Untagged 
+   0/10          Down -               Untagged 
+   0/12          Down -               Untagged 
+   0/14          Down -               Untagged 
+   0/16          Down -               Untagged 
+   0/18          Down -               Untagged 
+   0/20          Down -               Untagged 
+   0/21          Down -               Untagged 
+   0/22          Down -               Untagged 
+   0/23          Down -               Untagged 
+   0/24          Down -               Untagged 
+   0/25          Down -               Untagged 
+   0/26          Down -               Untagged 
+   0/27          Down -               Untagged 
+   0/28          Down -               Untagged 
+   0/29          Down -               Untagged 
+   0/30          Down -               Untagged 
+   0/31          Down -               Untagged 
+   0/32          Down -               Untagged 
+   0/33          Down -               Untagged 
+   0/34          Down -               Untagged 
+   0/35          Down -               Untagged 
+   0/36          Down -               Untagged 
+   0/37          Down -               Untagged 
+   0/38          Down -               Untagged 
+   0/39          Down -               Untagged 
+   0/40          Down -               Untagged 
+   0/41          Down -               Untagged 
+   0/42          Down -               Untagged 
+   0/43          Down -               Untagged 
+   0/44          Down -               Untagged 
+   0/45          Down -               Untagged 
+   0/46          Down -               Untagged 
+   0/49          Down -               Untagged 
+   0/50          Down -               Untagged 
+   0/51          Down -               Untagged 
+   0/52          Down -               Untagged

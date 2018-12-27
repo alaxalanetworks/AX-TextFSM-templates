@@ -1,0 +1,29 @@
+Date 1980/01/14 06:36:44 UTC
+ChGr: 1   Mode: Static
+  CH Status      : Up      Elapsed Time: 2.21:34:55
+  Max Active Port: 8  
+  MAC address    : 0012.e272.0483  VLAN ID: 100
+  Port Information
+  Port: 1/0/11  Down
+    State: Detached      Speed: -      Duplex: -
+  Port: 2/0/13  Up  
+    State: Distributing  Speed: 1G     Duplex: Full
+ChGr: 50  Mode: LACP
+  CH Status      : Up      Elapsed Time: 2.21:27:38
+  Max Active Port: 8  
+  Description    : AX25-stack-LAG
+  MAC address    : 0012.e262.b572  VLAN ID: 200
+  Periodic Timer : Short
+  Actor System   : Priority: 128    MAC: 0012.e262.b563  Key: 50
+  Partner System : Priority: 128    MAC: 0012.e2c2.3a1c  Key: 50
+  Port Information
+  Port: 1/0/15  Up  
+    State: Distributing  Speed: 1G     Duplex: Full
+    Actor   Port  : Priority: 128
+    Partner System: Priority: 128    MAC: 0012.e2c2.3a1c  Key: 50
+    Partner Port  : Priority: 128    Number: 15
+  Port: 2/0/17  Up  
+    State: Distributing  Speed: 1G     Duplex: Full
+    Actor   Port  : Priority: 128
+    Partner System: Priority: 128    MAC: 0012.e2c2.3a1c  Key: 50
+    Partner Port  : Priority: 128    Number: 17

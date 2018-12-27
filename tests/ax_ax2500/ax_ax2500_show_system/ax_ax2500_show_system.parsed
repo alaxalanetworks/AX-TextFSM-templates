@@ -1,0 +1,22 @@
+- BOOT_TIME:
+  - 1980/01/11 08:38:02
+  - 1980/01/11 08:50:05
+  CONTACT: admin
+  LOCATION: Kanagawa
+  MACHINE_ID:
+  - 0012.e262.b563
+  - 0012.e272.0476
+  MODEL: ''
+  NAME: AX25-stack
+  OS_BUILD: ''
+  OS_VERSION: ''
+  RELOAD_REASON:
+  - Reload
+  - Reload
+  STACK_MAC: 0012.e262.b563
+  SWITCH_NO:
+  - '1'
+  - '2'
+  UPTIME:
+  - 2 days 22:00:19
+  - 2 days 21:48:16

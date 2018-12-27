@@ -1,0 +1,64 @@
+Date 1980/01/14 06:38:21 UTC
+System
+    Name         : AX25-stack
+    Contact      : admin
+    Locate       : Kanagawa
+    MAC address  : 0012.e262.b563
+    Switch  Machine ID      Boot Date            Boot reason       Elapsed time
+         1  0012.e262.b563  1980/01/11 08:38:02  Reload            2 days 22:00:19
+         2  0012.e272.0476  1980/01/11 08:50:05  Reload            2 days 21:48:16
+    Switch  ST1 LED      ST2 LED
+         1  Green        Green
+         2  Green        Orange
+    Brightness mode : normal
+    MC configuration mode : disabled
+    Power redundancy-mode : check is not executed
+
+Environment
+            Fan     PS      EPU         Current      Temperature   Running time(total)
+    Switch  Speed           EPU-Fan     Accumulated                Running time(critical)
+         1  active  active  notconnect  41.47 W      normal        616 days and 12 hours
+            normal          -           13.27 kWh                  0 days and 0 hours
+         2  active  active  notconnect  41.17 W      normal        813 days and 12 hours
+            normal          -           3.02 kWh                   0 days and 0 hours
+
+File System
+    < RAMDISK information >
+       used       140,288 byte
+       free    31,316,992 byte
+       total   31,457,280 byte
+    < RAMDISK files >
+     There is no file. ( RAMDISK )
+    < MC information >
+    MC : not connect
+
+Device Resources
+    IP Interface Entry            :     1(max entry=128)
+    IP Address Entry              :     1(max entry=128)
+    IPv4 ARP Entry                :     1(max entry=2560)
+    IPv6 NDP Entry                :     0(max entry=256)
+    MAC-address Table Entry       :    10(max entry=32768)
+
+    System Layer2 Table Mode  : 1
+    Switch  Limit queue length
+         1                  64
+         2                  64
+    Flow detection mode : layer2-2
+      Used resources for filter(Used/Max)
+                                   MAC      IPv4
+        Port 1/0/1-28        :       -     0/256
+        Port 2/0/1-28        :       -     0/256
+        VLAN                 :       -     0/256
+      Used resources for QoS(Used/Max)
+                                   MAC      IPv4
+        Port 1/0/1-28        :       -     0/128
+        Port 2/0/1-28        :       -     0/128
+        VLAN                 :       -     0/128
+      Used resources for TCP/UDP port detection pattern
+        Resources(Used/Max):  0/16
+    Flow detection out mode: layer2-2-out
+      Used resources for filter outbound(Used/Max)
+                                   MAC      IPv4
+        Port 1/0/1-28        :       -     0/128
+        Port 2/0/1-28        :       -     0/128
+        VLAN                 :       -     0/128
